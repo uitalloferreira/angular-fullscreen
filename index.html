@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>angular-fullscreen</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="js/app.module.js"></script>
+    <script src="js/app.controller.js"></script>
+
+    <!-- Scripts angular-fullscreen -->
+    <script src="bower_components/screenfull/dist/screenfull.js"></script>
+    <script src="bower_components/angular-screenfull/dist/angular-screenfull.min.js"></script>
+
+  </head>
+  <body ng-app="app" ng-controller="appCtrl">
+    <div class="jumbotron">
+      <div class="container">
+        <h2>Angular Full-Screen</h2>
+        <p>
+          Teste de funcionamento do angular-fullscreen
+        </p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+          <div class="col-md-6">
+
+            <h4>Este imagem é um elemento fullscreen</h4>
+            <div ngsf-fullscreen>
+                <img ngsf-toggle-fullscreen src="img/abstract.jpg" style="width: 100%"/>
+              </div>
+          </div>
+          <div class="col-md-6">
+            <h4>Com funcionalidade exportada no controlador</h4>
+            <div ngsf-fullscreen="fullscreenCtrl">
+                  <img ng-click="fullscreenCtrl.toggleFullscreen()" src="img/abstract.jpg" style="width: 100%"/>
+                </div>
+            </div>
+          </div>
+    </div>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
